@@ -1,1 +1,1 @@
-include $(sort $(wildcard $(BR2_EXTERNAL_RPI4_LVGL_PATH)/package/*/*.mk))
+include $(sort $(wildcard $(BR2_EXTERNAL_lvgl_rpi4_PATH)/package/*/*.mk))

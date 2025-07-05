@@ -54,4 +54,7 @@ CMakeUserPresets.json
 .history
 .ionide
 
+# buildroot generated files
+output
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,linux,cmake
