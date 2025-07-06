@@ -11,7 +11,7 @@ define BUILDROOT_MAKE
 			BR2_EXTERNAL=$(PROJECT_PATH)
 endef
 
-.PHONY: all clean vars menuconfig
+.PHONY: all clean vars menuconfig sdk
 
 all:
 	export PATH=$(PATH_NEW)
@@ -22,6 +22,9 @@ menuconfig:
 
 %_defconfig:
 	$(BUILDROOT_MAKE) $*_defconfig
+
+sdk:
+	$(BUILDROOT_MAKE) sdk
 
 clean:
 	$(BUILDROOT_MAKE) clean
