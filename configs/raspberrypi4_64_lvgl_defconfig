@@ -47,3 +47,11 @@ BR2_PACKAGE_HOST_KMOD_XZ=y
 # this setting is to enable the DRM
 BR2_ROOTFS_DEVICE_CREATION_DYNAMIC_EUDEV=y
 BR2_LINUX_KERNEL_NEEDS_HOST_LIBELF=y
+
+# Enabale the libdrm
+BR2_PACKAGE_LIBDRM=y
+BR2_PACKAGE_LIBDRM_HAS_ATOMIC=y
+BR2_PACKAGE_LIBDRM_VC4=y
+
+# set the driectory to rootfs overlay
+BR2_ROOTFS_OVERLAY="$(BR2_EXTERNAL_LVGL_RPI4_PATH)/board/raspberrypi/rootfs_overlay"
