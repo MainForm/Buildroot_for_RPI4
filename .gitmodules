@@ -1,3 +1,6 @@
 [submodule "buildroot"]
 	path = buildroot
 	url = https://github.com/MainForm/buildroot.git
+[submodule "application/lvgl_application"]
+	path = application/lvgl_application
+	url = https://github.com/MainForm/LVGL_application_for_linux.git
