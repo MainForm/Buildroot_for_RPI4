@@ -36,6 +36,7 @@ CMakeUserPresets.json
 .nfs*
 
 ### VisualStudioCode ###
+.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
