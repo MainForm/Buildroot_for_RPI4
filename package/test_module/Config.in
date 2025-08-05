@@ -1,0 +1,5 @@
+config BR2_PACKAGE_TEST_MODULE
+        bool "test_module"
+        depends on BR2_LINUX_KERNEL
+        help
+          This package is to test adding the package that is for kernel module.

@@ -1,0 +1,1 @@
+source "$BR2_EXTERNAL_LVGL_RPI4_PATH/package/test_module/Config.in"
