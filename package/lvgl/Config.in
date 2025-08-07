@@ -1,0 +1,6 @@
+config BR2_PACKAGE_LVGL
+	bool "LVGL package from git"
+	help
+		LVGL: Light and Versatile Graphics Library
+
+		https://github.com/MainForm/buildroot_lvgl_package

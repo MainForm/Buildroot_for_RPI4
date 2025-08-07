@@ -1,1 +1,3 @@
 source "$BR2_EXTERNAL_LVGL_RPI4_PATH/package/test_module/Config.in"
+source "$BR2_EXTERNAL_LVGL_RPI4_PATH/package/lvgl/Config.in"
+source "$BR2_EXTERNAL_LVGL_RPI4_PATH/package/lvgl_app/Config.in"

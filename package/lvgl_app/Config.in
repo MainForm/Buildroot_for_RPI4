@@ -1,0 +1,11 @@
+
+config BR2_PACKAGE_LVGL_APP
+	bool "LVGL applications"
+	depends on BR2_PACKAGE_LVGL
+	help
+		LVGL: Light and Versatile Graphics Library
+
+		https://lvgl.io/
+
+comment "LVGL_APP needs an LVGL package"
+	depends on !BR2_PACKAGE_LVGL
