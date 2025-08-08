@@ -59,14 +59,26 @@ void lv_example_button_1(void)
 
 }
 
-int main(void){
+int main(int argc,char * args[]){
 
     lv_init();
 
     lv_display_t * disp = lv_linux_disp_init();
+    lv_indev_t *indev = NULL;
 
-    lv_indev_t *touch = lv_evdev_create(LV_INDEV_TYPE_POINTER, "/dev/input/event2");
-    lv_indev_set_display(touch, disp);
+    if(argc == 1){
+        char *path = lv_libinput_find_dev(LV_LIBINPUT_CAPABILITY_TOUCH, true);
+        indev = lv_libinput_create(LV_INDEV_TYPE_POINTER, path);
+        printf("found the device : %s\n", path);
+    }
+    else{
+        indev = lv_libinput_create(LV_INDEV_TYPE_POINTER, args[1]);
+    }
+
+    lv_indev_set_display(indev, disp);
+
+    // lv_indev_t *touch = lv_evdev_create(LV_INDEV_TYPE_POINTER, "/dev/input/event2");
+    // lv_indev_set_display(touch, disp);
     //lv_demo_benchmark();
     //lv_demo_widgets();
 

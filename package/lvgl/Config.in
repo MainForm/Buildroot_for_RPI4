@@ -19,10 +19,20 @@ config BR2_PACKAGE_LVGL
 
 		https://github.com/MainForm/buildroot_lvgl_package
 
+comment "LVGL graphic Platform"
+
 config BR2_PACKAGE_LVGL_USE_DRM
 	bool "DRM support"
 	depends on BR2_PACKAGE_LIBDRM
 	help
 		LVGL use libdrm to draw window
+
+comment "LVGL input library"
+
+config BR2_PACKAGE_LVGL_USE_LIBINPUT
+	bool "libinput support"
+	depends on BR2_PACKAGE_LIBINPUT
+	help
+		LVGL use libinput for input device like mouse and keyboard
 
 endif
